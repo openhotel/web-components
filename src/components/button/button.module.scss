@@ -1,0 +1,32 @@
+.button {
+  display: inline-flex;
+  //width: 100%;
+  //max-width: 15rem;
+  width: auto;
+
+  padding: 1rem 2rem;
+
+  border-radius: .75rem;
+  //background-color: #44b24b;
+  background-color: #f1c72d;
+
+  border-bottom: 2px solid #d08d28;
+
+  font-weight: bold;
+
+  cursor: pointer;
+  color: #272536;
+
+  user-select: none;
+
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: #f1b92d;
+  }
+
+  &:active {
+    border-bottom: 0;
+    border-top: 2px solid #d08d28;
+  }
+}

@@ -1,22 +1,12 @@
 import * as React from "react";
 
+// @ts-ignore
+import styles from "./button.module.scss";
+
 type Props = {
-  label: string;
-  backgroundColor?: string;
+  children?: React.ReactNode;
 };
 
-export const Button: React.FC<Props> = ({
-  backgroundColor,
-  label,
-  ...props
-}) => {
-  return (
-    <button
-      type="button"
-      style={backgroundColor ? { backgroundColor } : { color: "green" }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
+export const Button: React.FC<Props> = ({ children }) => {
+  return <div className={styles.button}>{children}</div>;
 };
