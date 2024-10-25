@@ -1,0 +1,34 @@
+.accountItem {
+
+  border-radius: .75rem;
+  padding: 1rem 2rem;
+
+  color: var(--text-primary);
+
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+
+  .avatar {
+    $radius: 4rem;
+
+    background-color: var(--bg);
+    height: $radius;
+    width: $radius;
+    border-radius: $radius;
+  }
+
+
+  &:hover, &.selected {
+    //background-color: var(--dark-bg-main);
+  }
+
+  &:active {
+    //background-color: var(--bg-secondary);
+  }
+}

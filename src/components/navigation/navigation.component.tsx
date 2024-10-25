@@ -2,9 +2,8 @@ import * as React from "react";
 
 // @ts-ignore
 import styles from "./navigation.module.scss";
+// @ts-ignore
 import image from "../../../assets/logo.png";
-
-import { HomeIconComponent, NavItem } from "../index";
 
 type Props = {
   children?: React.ReactNode;
@@ -16,7 +15,7 @@ export const NavigationComponent: React.FC<Props> = ({ children }) => {
       <div className={styles.logo}>
         <img alt="logo" src={image} />
       </div>
-      {children}
+      <div className={styles.items}>{children}</div>
     </nav>
   );
 };

@@ -1,0 +1,18 @@
+.social {
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  gap: 1rem;
+
+  a {
+    display: contents;
+  }
+
+  svg path {
+    fill: var(--text-primary) !important;
+  }
+}

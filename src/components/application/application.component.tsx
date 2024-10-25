@@ -9,8 +9,12 @@ import {
   NavigationComponent,
   DiscordIconComponent,
   BskyIconComponent,
-  NavItem,
+  NavItemComponent,
   HomeIconComponent,
+  AccountItemComponent,
+  LicenseComponent,
+  HotelIconComponent,
+  SocialComponent,
 } from "../../components";
 
 type Props = {
@@ -23,12 +27,12 @@ export const ApplicationComponent: React.FC<Props> = ({ children }) => {
       <div className={styles.bigCard}>
         <div className={styles.container}>
           <NavigationComponent>
-            <NavItem selected>
-              <HomeIconComponent /> Home
-            </NavItem>
-            <NavItem>
-              <HomeIconComponent /> Hotels
-            </NavItem>
+            <NavItemComponent selected icon={<HomeIconComponent />}>
+              Home
+            </NavItemComponent>
+            <NavItemComponent icon={<HotelIconComponent />}>
+              Hotels
+            </NavItemComponent>
           </NavigationComponent>
           <div className={styles.bigContainer}>
             <HeaderComponent>
@@ -36,6 +40,7 @@ export const ApplicationComponent: React.FC<Props> = ({ children }) => {
                 {/*<HomeIconComponent fill="black" />*/}
                 <span>Check In</span>
               </Button>
+              <AccountItemComponent />
             </HeaderComponent>
             <main className={styles.main}>
               <div className={styles.content}>
@@ -92,10 +97,12 @@ export const ApplicationComponent: React.FC<Props> = ({ children }) => {
           </div>
         </div>
         <FooterComponent>
-          <div>
-            <DiscordIconComponent />
-            <BskyIconComponent />
-          </div>
+          <SocialComponent />
+          <a href="#">Manifest</a>
+          <a href="#">Report a bug</a>
+          <a href="#">Run your own hotel</a>
+          <a href="#">Terms and conditions</a>
+          <LicenseComponent />
         </FooterComponent>
       </div>
       <div>{children}</div>

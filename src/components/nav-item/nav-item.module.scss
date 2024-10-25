@@ -1,6 +1,6 @@
-.button {
+.navItem {
 
-  padding: 1.5rem 4rem;
+  padding: 1rem 4rem 1rem 3rem;
   border-radius: .75rem;
 
   color: var(--text-secondary);
@@ -16,7 +16,7 @@
   align-items: center;
 
   svg {
-    height: 2rem;
+    height: 1.8rem;
 
     path {
       fill: var(--text-secondary);

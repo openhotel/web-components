@@ -1,19 +1,26 @@
 
 .navigation {
-  width: 24rem;
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 
-  padding: 1.5rem 2rem;
+  padding: 1rem;
 
   .logo {
-    margin: 1rem auto;
+    margin: 0 auto;
 
     img {
       width: 12.8rem;
-      transform: scale(1.5);
     }
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    height: 100%;
+
+    margin-top: 1rem;
   }
 }

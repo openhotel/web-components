@@ -4,9 +4,9 @@
   background-color: var(--bg-footer);
 
   display: flex;
-  padding: 5rem 4rem;
+  padding: 3rem 4rem;
+  justify-content: space-between;
 
-  svg path {
-    fill: var(--text-primary) !important;
-  }
+  text-align: center;
+  align-items: center;
 }

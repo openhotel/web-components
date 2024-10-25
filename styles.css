@@ -1,20 +1,20 @@
 :root {
-    --light-bg: #15141e;
-    --light-bg-main: #caced3;
-    --light-bg-card: #e5eaea;
-    --light-bg-footer: #f8fcff;
+    --light-bg: #15141c;
+    --light-bg-main: #dbdbdb;
+    --light-bg-card: #efefef;
+    --light-bg-footer: #fcfcfc;
 
     --light-bg-primary: #2d62bb;
     --light-bg-secondary: #174186;
 
-    --light-text-primary: #15141e;
+    --light-text-primary: #15141c;
     --light-text-secondary: #2a2b2f;
 
-    -----------------------------------1: 0;
+    ------------------------------------: 0;
 
     --dark-bg: #f8fcff;
-    --dark-bg-main: #27282c;
-    --dark-bg-card: #3b3d44;
+    --dark-bg-main: #212224;
+    --dark-bg-card: #2e3035;
     --dark-bg-footer: #15141e;
 
     --dark-bg-primary: #2e518d;
@@ -23,7 +23,7 @@
     --dark-text-primary: #f8fcff;
     --dark-text-secondary: #d1d2d5;
 
-    ------------------------------------2: 0;
+    ------------------------------------: 0;
 
     --bg: var(--light-bg);
     --bg-main: var(--light-bg-main);
@@ -37,7 +37,18 @@
     --text-secondary: var(--light-text-secondary);
 
 
-    ------------------------------------3: 0;
+    ------------------------------------: 0;
+
+    --inv-bg: var(--dark-bg);
+    --inv-bg-main: var(--dark-bg-main);
+    --inv-bg-card: var(--dark-bg-card);
+    --inv-bg-footer: var(--dark-bg-footer);
+
+    --inv-bg-primary: var(--dark-bg-primary);
+    --inv-bg-secondary: var(--dark-bg-secondary);
+
+    --inv-text-primary: var(--dark-text-primary);
+    --inv-text-secondary: var(--dark-text-secondary);
 
     @media (prefers-color-scheme: dark) {
         --bg: var(--dark-bg);
@@ -50,11 +61,24 @@
 
         --text-primary: var(--dark-text-primary);
         --text-secondary: var(--dark-text-secondary);
+
+        ------------------------------------: 0;
+
+        --inv-bg: var(--light-bg);
+        --inv-bg-main: var(--light-bg-main);
+        --inv-bg-card: var(--light-bg-card);
+        --inv-bg-footer: var(--light-bg-footer);
+
+        --inv-bg-primary: var(--light-bg-primary);
+        --inv-bg-secondary: var(--light-bg-secondary);
+
+        --inv-text-primary: var(--light-text-primary);
+        --inv-text-secondary: var(--light-text-secondary);
     }
 }
 
 * {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-family: ui-sans-serif, system-ui, sans-serif;
     box-sizing: border-box;
 

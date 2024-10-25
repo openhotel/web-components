@@ -7,15 +7,25 @@ import { cn } from "../../utils";
 type Props = {
   className?: string;
   selected?: boolean;
+  icon?: React.ReactNode;
 } & React.HTMLProps<HTMLDivElement>;
 
-export const NavItem: React.FC<Props> = ({ className, selected, ...props }) => {
+export const NavItemComponent: React.FC<Props> = ({
+  className,
+  selected,
+  icon,
+  children,
+  ...props
+}) => {
   return (
     <div
-      className={cn(styles.button, className, {
+      className={cn(styles.navItem, className, {
         [styles.selected]: Boolean(selected),
       })}
       {...props}
-    />
+    >
+      {icon}
+      {children}
+    </div>
   );
 };
