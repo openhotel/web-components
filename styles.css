@@ -3,26 +3,53 @@
     --light-bg-main: #caced3;
     --light-bg-card: #e5eaea;
     --light-bg-footer: #f8fcff;
-    --light-text: #15141e;
+
+    --light-bg-primary: #2d62bb;
+    --light-bg-secondary: #174186;
+
+    --light-text-primary: #15141e;
+    --light-text-secondary: #2a2b2f;
+
+    -----------------------------------1: 0;
 
     --dark-bg: #f8fcff;
-    --dark-bg-main: #212731;
+    --dark-bg-main: #27282c;
     --dark-bg-card: #3b3d44;
     --dark-bg-footer: #15141e;
-    --dark-text: #f8fcff;
+
+    --dark-bg-primary: #2e518d;
+    --dark-bg-secondary: #2e4977;
+
+    --dark-text-primary: #f8fcff;
+    --dark-text-secondary: #d1d2d5;
+
+    ------------------------------------2: 0;
 
     --bg: var(--light-bg);
     --bg-main: var(--light-bg-main);
     --bg-card: var(--light-bg-card);
     --bg-footer: var(--light-bg-footer);
-    --text: var(--light-text);
+
+    --bg-primary: var(--light-bg-primary);
+    --bg-secondary: var(--light-bg-secondary);
+
+    --text-primary: var(--light-text-primary);
+    --text-secondary: var(--light-text-secondary);
+
+
+    ------------------------------------3: 0;
 
     @media (prefers-color-scheme: dark) {
         --bg: var(--dark-bg);
         --bg-main: var(--dark-bg-main);
         --bg-card: var(--dark-bg-card);
         --bg-footer: var(--dark-bg-footer);
-        --text: var(--dark-text);
+
+        --bg-primary: var(--dark-bg-primary);
+        --bg-secondary: var(--dark-bg-secondary);
+
+        --text-primary: var(--dark-text-primary);
+        --text-secondary: var(--dark-text-secondary);
     }
 }
 

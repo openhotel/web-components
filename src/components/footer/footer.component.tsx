@@ -8,5 +8,5 @@ type Props = {
 };
 
 export const FooterComponent: React.FC<Props> = ({ children }) => {
-  return <footer className={styles.footer}>footer</footer>;
+  return <footer className={styles.footer}>{children}</footer>;
 };

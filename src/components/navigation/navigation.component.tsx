@@ -4,6 +4,8 @@ import * as React from "react";
 import styles from "./navigation.module.scss";
 import image from "../../../assets/logo.png";
 
+import { HomeIconComponent, NavItem } from "../index";
+
 type Props = {
   children?: React.ReactNode;
 };

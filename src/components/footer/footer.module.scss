@@ -1,6 +1,12 @@
 
 .footer {
-  height: 8rem;
 
   background-color: var(--bg-footer);
+
+  display: flex;
+  padding: 5rem 4rem;
+
+  svg path {
+    fill: var(--text-primary) !important;
+  }
 }

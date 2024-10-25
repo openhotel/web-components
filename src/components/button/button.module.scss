@@ -1,15 +1,13 @@
 .button {
   display: inline-flex;
-  //width: 100%;
-  //max-width: 15rem;
-  width: auto;
+  width: fit-content;
+  height: fit-content;
 
   padding: 1rem 2rem;
 
   border-radius: .75rem;
-  //background-color: #44b24b;
-  background-color: #f1c72d;
 
+  background-color: #f1c72d;
   border-bottom: 2px solid #d08d28;
 
   font-weight: bold;
@@ -19,7 +17,6 @@
 
   user-select: none;
 
-  margin-top: 1rem;
 
   &:hover {
     background-color: #f1b92d;

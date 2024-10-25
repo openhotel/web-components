@@ -1,0 +1,45 @@
+.button {
+
+  padding: 1.5rem 4rem;
+  border-radius: .75rem;
+
+  color: var(--text-secondary);
+  background-color: var(--bg-main);
+
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+
+  svg {
+    height: 2rem;
+
+    path {
+      fill: var(--text-secondary);
+    }
+  }
+
+  @mixin setColorWhenLight {
+    @media (prefers-color-scheme: light) {
+      color: var(--dark-text-primary);
+      svg path {
+        fill: var(--dark-text-primary);
+      }
+    }
+  }
+
+  &:hover, &.selected {
+    background-color: var(--bg-primary);
+
+    @include setColorWhenLight;
+  }
+
+  &:active {
+    background-color: var(--bg-secondary);
+    @include setColorWhenLight;
+  }
+}

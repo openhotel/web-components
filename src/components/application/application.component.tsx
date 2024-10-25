@@ -7,6 +7,9 @@ import {
   FooterComponent,
   HeaderComponent,
   NavigationComponent,
+  DiscordIconComponent,
+  BskyIconComponent,
+  NavItem,
   HomeIconComponent,
 } from "../../components";
 
@@ -19,18 +22,81 @@ export const ApplicationComponent: React.FC<Props> = ({ children }) => {
     <div className={styles.application}>
       <div className={styles.bigCard}>
         <div className={styles.container}>
-          <NavigationComponent></NavigationComponent>
+          <NavigationComponent>
+            <NavItem selected>
+              <HomeIconComponent /> Home
+            </NavItem>
+            <NavItem>
+              <HomeIconComponent /> Hotels
+            </NavItem>
+          </NavigationComponent>
           <div className={styles.bigContainer}>
             <HeaderComponent>
               <Button>
                 {/*<HomeIconComponent fill="black" />*/}
-                <label>Check In</label>
+                <span>Check In</span>
               </Button>
             </HeaderComponent>
-            <main className={styles.main}>content</main>
+            <main className={styles.main}>
+              <div className={styles.content}>
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+                <p />
+                content
+              </div>
+            </main>
           </div>
         </div>
-        <FooterComponent>footer</FooterComponent>
+        <FooterComponent>
+          <div>
+            <DiscordIconComponent />
+            <BskyIconComponent />
+          </div>
+        </FooterComponent>
       </div>
       <div>{children}</div>
     </div>

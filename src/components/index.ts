@@ -4,3 +4,4 @@ export * from "./application";
 export * from "./footer";
 export * from "./navigation";
 export * from "./icons";
+export * from "./nav-item";

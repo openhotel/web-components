@@ -1,9 +1,9 @@
 import { fn } from "@storybook/test";
-import { Button } from "./button.component";
+import { NavItem } from "./nav-item.component";
 
 export default {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/Navigation/Item",
+  component: NavItem,
   parameters: {
     layout: "centered",
   },
@@ -11,6 +11,12 @@ export default {
 };
 
 export const Primary = {
+  args: {
+    children: "Button",
+  },
+};
+
+export const Selected = {
   args: {
     children: "Button",
   },
