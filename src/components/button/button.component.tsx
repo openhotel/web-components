@@ -8,6 +8,6 @@ type Props = {
   className?: string;
 } & React.HTMLProps<HTMLDivElement>;
 
-export const Button: React.FC<Props> = ({ className, ...props }) => {
+export const ButtonComponent: React.FC<Props> = ({ className, ...props }) => {
   return <div className={cn(styles.button, className)} {...props} />;
 };

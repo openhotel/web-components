@@ -1,9 +1,9 @@
 import { fn } from "@storybook/test";
-import { Button } from "./button.component";
+import { ButtonComponent } from "./button.component";
 
 export default {
   title: "Components/Button",
-  component: Button,
+  component: ButtonComponent,
   parameters: {
     layout: "centered",
   },

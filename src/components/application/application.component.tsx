@@ -3,12 +3,10 @@ import * as React from "react";
 // @ts-ignore
 import styles from "./application.module.scss";
 import {
-  Button,
+  ButtonComponent,
   FooterComponent,
   HeaderComponent,
   NavigationComponent,
-  DiscordIconComponent,
-  BskyIconComponent,
   NavItemComponent,
   HomeIconComponent,
   AccountItemComponent,
@@ -33,13 +31,19 @@ export const ApplicationComponent: React.FC<Props> = ({ children }) => {
             <NavItemComponent icon={<HotelIconComponent />}>
               Hotels
             </NavItemComponent>
+            <NavItemComponent icon={<HotelIconComponent />}>
+              Hotels
+            </NavItemComponent>
+            <NavItemComponent icon={<HotelIconComponent />}>
+              Hotels or not hotels
+            </NavItemComponent>
           </NavigationComponent>
           <div className={styles.bigContainer}>
             <HeaderComponent>
-              <Button>
+              <ButtonComponent>
                 {/*<HomeIconComponent fill="black" />*/}
                 <span>Check In</span>
-              </Button>
+              </ButtonComponent>
               <AccountItemComponent />
             </HeaderComponent>
             <main className={styles.main}>

@@ -1,5 +1,5 @@
 :root {
-    --light-bg: #15141c;
+    --light-bg: #ffffff;
     --light-bg-main: #dbdbdb;
     --light-bg-card: #efefef;
     --light-bg-footer: #fcfcfc;
@@ -12,10 +12,10 @@
 
     ------------------------------------: 0;
 
-    --dark-bg: #f8fcff;
+    --dark-bg: #29292d;
     --dark-bg-main: #212224;
     --dark-bg-card: #2e3035;
-    --dark-bg-footer: #15141e;
+    --dark-bg-footer: #141418;
 
     --dark-bg-primary: #2e518d;
     --dark-bg-secondary: #2e4977;

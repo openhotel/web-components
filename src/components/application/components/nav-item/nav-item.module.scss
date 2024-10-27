@@ -1,6 +1,8 @@
+@use "../../../../styles/overflow.module.scss";
+
 .navItem {
 
-  padding: 1rem 4rem 1rem 3rem;
+  padding: 1rem 1rem 1rem 2rem;
   border-radius: .75rem;
 
   color: var(--text-secondary);
@@ -21,6 +23,12 @@
     path {
       fill: var(--text-secondary);
     }
+  }
+
+  .text {
+    flex: 1;
+    text-align: left;
+    @include overflow.textEllipsis();
   }
 
   @mixin setColorWhenLight {

@@ -2,7 +2,7 @@ import * as React from "react";
 
 // @ts-ignore
 import styles from "./nav-item.module.scss";
-import { cn } from "../../utils";
+import { cn } from "../../../../utils";
 
 type Props = {
   className?: string;
@@ -25,7 +25,7 @@ export const NavItemComponent: React.FC<Props> = ({
       {...props}
     >
       {icon}
-      {children}
+      <span className={styles.text}>{children}</span>
     </div>
   );
 };
