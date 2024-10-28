@@ -6,5 +6,7 @@ export default {
 };
 
 export const Primary = {
-  args: {},
+  args: {
+    children: <div>test</div>,
+  },
 };

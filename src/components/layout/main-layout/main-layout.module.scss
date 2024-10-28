@@ -7,7 +7,6 @@
   $margin: .5rem;
 
   margin: $margin auto;
-  border-radius: 1.5rem;
   width: calc(100% - ($margin * 2));
   height: calc(100% - ($margin * 2));
 
@@ -27,6 +26,13 @@
       display: flex;
       flex-direction: column;
       flex: 1;
+
+      .main {
+        border-top-left-radius: .75rem;
+
+        background-color: var(--bg-main);
+        @include colors.setPrimaryTextColors();
+      }
     }
   }
 }

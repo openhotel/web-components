@@ -31,7 +31,7 @@ export const MainLayoutComponent: React.FC<Props> = ({
           <NavigatorComponent children={navigatorChildren} />
           <div className={styles.bigContainer}>
             <HeaderComponent children={headerChildren} />
-            <MainComponent children={children} />
+            <MainComponent className={styles.main} children={children} />
           </div>
         </div>
         <FooterComponent>
