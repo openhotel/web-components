@@ -1,10 +1,12 @@
 import { FooterComponent } from "./footer.component";
 
 export default {
-  title: "Components/Footer",
+  title: "Components/Layout/Footer",
   component: FooterComponent,
 };
 
 export const Primary = {
-  args: {},
+  args: {
+    children: "footer",
+  },
 };

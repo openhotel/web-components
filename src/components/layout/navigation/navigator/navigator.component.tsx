@@ -5,13 +5,11 @@ import styles from "./navigation.module.scss";
 // @ts-ignore
 import image from "../../../../../assets/logo.png";
 
-type Props = {
-  children?: React.ReactNode;
-};
+type Props = {} & React.HTMLProps<HTMLDivElement>;
 
-export const NavigationComponent: React.FC<Props> = ({ children }) => {
+export const NavigatorComponent: React.FC<Props> = ({ children }) => {
   return (
-    <nav className={styles.navigation}>
+    <nav className={styles.navigator}>
       <div className={styles.logo}>
         <img alt="logo" src={image} />
       </div>

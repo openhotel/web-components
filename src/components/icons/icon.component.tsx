@@ -6,8 +6,7 @@ export type IconProps = {
   height?: number;
   fill?: string;
   stroke?: string;
-  children?: React.ReactNode;
-};
+} & React.SVGProps<SVGSVGElement>;
 
 export const IconComponent: React.FC<IconProps> = ({
   children,
