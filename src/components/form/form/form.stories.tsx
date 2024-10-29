@@ -9,18 +9,47 @@ export default {
     layout: "centered",
     backgrounds: { default: "dark" },
   },
-  args: { onSubmit: fn() },
+  args: { onSubmit: fn(), onError: fn() },
 };
 
 export const Primary = {
   args: {
+    validations: {
+      username: ({ value, addError }) => {
+        if (!value?.length) addError("Username cannot be empty");
+        if (value.length < 0) addError("Username is too short");
+        if (value.length > 4) addError("Username is too long");
+      },
+      password: ({ value, addError, data }) => {
+        if (!value?.length) addError("Password cannot be empty");
+        if (value.length < 0) addError("Password is too short");
+        if (value.length > 4) addError("Password is too long");
+        if (value !== data.rePassword) addError("Passwords doesn't match");
+      },
+      country: ({ value, addError, data }) => {
+        if (!value?.length) addError("Country cannot be empty");
+      },
+    },
     children: (
       <>
-        <InputComponent name="input" placeholder="placeholder" />
+        <InputComponent name="username" placeholder="username" />
+        <InputComponent
+          name="password"
+          type="password"
+          placeholder="password"
+        />
+        <InputComponent
+          name="rePassword"
+          type="password"
+          placeholder="repeat password"
+        />
         <SelectorComponent
-          name="selector"
-          placeholder="placeholder"
-          options={[{ key: "abc", value: "ABC" }]}
+          name="country"
+          placeholder="country"
+          options={[
+            { key: "es", value: "Spain" },
+            { key: "pt", value: "Portugal" },
+          ]}
         />
         <ButtonComponent>Submit</ButtonComponent>
       </>

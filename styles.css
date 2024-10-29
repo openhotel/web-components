@@ -39,6 +39,10 @@
 
     ------------------------------------: 0;
 
+    --text-danger: #f93434;
+
+    ------------------------------------: 0;
+
     --inv-bg: var(--dark-bg);
     --inv-bg-main: var(--dark-bg-main);
     --inv-bg-card: var(--dark-bg-card);

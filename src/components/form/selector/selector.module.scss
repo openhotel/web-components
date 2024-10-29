@@ -6,6 +6,10 @@
         display: flex;
 
         color: var(--text-primary);
+        svg path {
+            fill: var(--text-primary);
+        }
+
         background-color: var(--bg-footer);
 
         gap: 1rem;
@@ -22,6 +26,21 @@
 
         .clear {
             cursor: pointer;
+            height: 1.8rem;
+            opacity: .5;
+
+            svg {
+                height: 1.8rem;
+            }
+        }
+
+        .chevron {
+            height: 1.8rem;
+            margin-left: auto;
+
+            svg {
+                height: 1.8rem;
+            }
         }
 
         .selection {

@@ -4,6 +4,10 @@ import * as React from "react";
 import styles from "./selector.module.scss";
 import { cn } from "../../../utils";
 import { useCallback, useRef, useState } from "react";
+import {
+  ChevronDownIconComponent,
+  CrossIconComponent,
+} from "../../../components";
 
 type Option = {
   key: string | number;
@@ -51,11 +55,11 @@ export const SelectorComponent: React.FC<Props> = ({
   }, [setSelectedOption, onChange, setIsOpen]);
 
   const inputRef = useRef<HTMLInputElement>();
-  const closeRef = useRef();
+  const closeRef = useRef<HTMLInputElement>();
 
   const onToggleOptions = useCallback(
     (event) => {
-      if (event.target === closeRef.current) return;
+      if (closeRef.current && closeRef.current.contains(event.target)) return;
       setIsOpen((isOpen) => !isOpen);
     },
     [setIsOpen],
@@ -87,9 +91,12 @@ export const SelectorComponent: React.FC<Props> = ({
 
         {selectedOption ? (
           <div ref={closeRef} className={styles.clear} onClick={onClickClear}>
-            X
+            <CrossIconComponent />
           </div>
         ) : null}
+        <div className={styles.chevron}>
+          <ChevronDownIconComponent />
+        </div>
       </div>
       {isOpen ? (
         <div className={styles.modal}>
