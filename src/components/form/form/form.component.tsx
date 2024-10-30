@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FormEvent, useCallback, useRef, useState } from "react";
+import { FormEvent, useCallback, useState } from "react";
 
 // @ts-ignore
 import styles from "./form.module.scss";
@@ -15,7 +15,7 @@ type Props = {
   className?: string;
   onSubmit?: <Data = unknown>(data: Data) => void;
   onError?: (errors: string[]) => void;
-  validations?: Record<string, ValidationFunction>;
+  validations?: Record<string | "__custom", ValidationFunction>;
 } & React.DetailedHTMLProps<
   React.FormHTMLAttributes<HTMLFormElement>,
   HTMLFormElement
@@ -41,12 +41,18 @@ export const FormComponent: React.FC<Props> = ({
 
       const errorList: string[] = [];
 
-      for (const key of Object.keys(validations))
-        validations[key]({
+      for (const key of Object.keys(data))
+        validations[key]?.({
           value: data[key],
           addError: (value) => errorList.push(value),
           data,
         });
+
+      validations["__custom"]?.({
+        value: null,
+        addError: (value) => errorList.push(value),
+        data,
+      });
 
       setErrors(errorList);
       if (errorList.length) return onError(errorList);

@@ -29,6 +29,9 @@ export const Primary = {
       country: ({ value, addError, data }) => {
         if (!value?.length) addError("Country cannot be empty");
       },
+      __custom: ({ addError }) => {
+        addError("Captcha not valid!");
+      },
     },
     children: (
       <>
