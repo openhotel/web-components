@@ -8,6 +8,8 @@ type Props = {
   className?: string;
   selected?: boolean;
   icon?: React.ReactNode;
+
+  username?: string;
 } & React.HTMLProps<HTMLDivElement>;
 
 export const AccountItemComponent: React.FC<Props> = ({
@@ -15,6 +17,7 @@ export const AccountItemComponent: React.FC<Props> = ({
   selected,
   icon,
   children,
+  username,
   ...props
 }) => {
   return (
@@ -24,8 +27,7 @@ export const AccountItemComponent: React.FC<Props> = ({
       })}
       {...props}
     >
-      <div className={styles.avatar} />
-      <span>SrLameCulos99456</span>
+      <span>{username}</span>
     </div>
   );
 };

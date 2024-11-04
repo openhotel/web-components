@@ -1,1 +1,1 @@
-export * from "./form-card.component";
+export * from "./card-layout.component";

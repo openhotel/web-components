@@ -1,7 +1,7 @@
 .accountItem {
 
   border-radius: .75rem;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
 
   color: var(--text-primary);
 
@@ -11,24 +11,14 @@
 
   display: flex;
   gap: 1rem;
-  text-align: center;
-  align-items: center;
 
-  .avatar {
-    $radius: 4rem;
-
-    background-color: var(--bg);
-    height: $radius;
-    width: $radius;
-    border-radius: $radius;
-  }
-
+  border: 2px solid var(--bg-main);
 
   &:hover, &.selected {
-    //background-color: var(--dark-bg-main);
+    border: 2px solid var(--bg-primary);
   }
 
   &:active {
-    //background-color: var(--bg-secondary);
+    border: 2px solid var(--bg-secondary);
   }
 }

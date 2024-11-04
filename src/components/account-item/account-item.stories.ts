@@ -12,6 +12,7 @@ export default {
 
 export const Primary = {
   args: {
-    children: "Button",
+    username: "pagoru",
+    email: "pagoru@openhotel.club",
   },
 };

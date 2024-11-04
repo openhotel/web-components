@@ -16,10 +16,10 @@ export const Primary = {
   args: {
     headerChildren: (
       <>
-        <ButtonComponent>
+        <ButtonComponent buttonType="3d">
           <span>Check In</span>
         </ButtonComponent>
-        <AccountItemComponent />
+        <AccountItemComponent username="pagoru" />
       </>
     ),
     navigatorChildren: (

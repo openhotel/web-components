@@ -1,17 +1,13 @@
 import * as React from "react";
 
 // @ts-ignore
-import styles from "./form-card.module.scss";
-import {
-  BackgroundComponent,
-  CardComponent,
-  MainComponent,
-} from "../../../components";
-import { cn } from "src/utils";
+import styles from "./card-layout.module.scss";
+import { BackgroundComponent, CardComponent } from "../../../components";
+// import { cn } from "src/utils";
 
 type Props = {} & React.HTMLProps<HTMLDivElement>;
 
-export const FormCardComponent: React.FC<Props> = ({ children }) => {
+export const CardLayoutComponent: React.FC<Props> = ({ children }) => {
   return (
     <BackgroundComponent>
       <div className={styles.wrapper}>

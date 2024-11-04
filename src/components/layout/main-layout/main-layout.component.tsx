@@ -10,6 +10,7 @@ import {
   BackgroundComponent,
   CardComponent,
   MainComponent,
+  LicenseComponent,
 } from "../../../components";
 
 type Props = {
@@ -35,7 +36,9 @@ export const MainLayoutComponent: React.FC<Props> = ({
           </div>
         </div>
         <FooterComponent>
-          <SocialComponent children={footerChildren} />
+          <SocialComponent />
+          {footerChildren}
+          <LicenseComponent />
         </FooterComponent>
       </CardComponent>
     </BackgroundComponent>

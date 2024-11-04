@@ -1,8 +1,8 @@
-import { FormCardComponent } from "./form-card.component";
+import { CardLayoutComponent } from "./card-layout.component";
 
 export default {
   title: "Components/Layout/CardLayout",
-  component: FormCardComponent,
+  component: CardLayoutComponent,
 };
 
 export const Primary = {
