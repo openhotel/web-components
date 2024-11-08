@@ -1,6 +1,5 @@
 .accountItem {
-
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   padding: 1rem 3rem;
 
   color: var(--text-primary);
@@ -14,7 +13,8 @@
 
   border: 2px solid var(--bg-main);
 
-  &:hover, &.selected {
+  &:hover,
+  &.selected {
     border: 2px solid var(--bg-primary);
   }
 

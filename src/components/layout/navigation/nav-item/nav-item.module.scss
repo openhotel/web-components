@@ -1,9 +1,8 @@
 @use "../../../../styles/overflow.module.scss";
 
 .navItem {
-
   padding: 1rem 1rem 1rem 2rem;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
 
   color: var(--text-secondary);
   background-color: var(--bg-main);
@@ -40,7 +39,8 @@
     }
   }
 
-  &:hover, &.selected {
+  &:hover,
+  &.selected {
     background-color: var(--bg-primary);
 
     @include setColorWhenLight;
