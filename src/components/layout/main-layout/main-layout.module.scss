@@ -30,6 +30,10 @@
       .main {
         border-top-left-radius: .75rem;
 
+        &.headless {
+          border-top-left-radius: 1.5rem;
+        }
+
         background-color: var(--bg-main);
         @include colors.setPrimaryTextColors();
       }

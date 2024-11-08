@@ -12,6 +12,7 @@ import {
   MainComponent,
   LicenseComponent,
 } from "../../../components";
+import { cn } from "../../../utils";
 
 type Props = {
   navigatorChildren?: React.ReactNode;
@@ -31,8 +32,13 @@ export const MainLayoutComponent: React.FC<Props> = ({
         <div className={styles.container}>
           <NavigatorComponent children={navigatorChildren} />
           <div className={styles.bigContainer}>
-            <HeaderComponent children={headerChildren} />
-            <MainComponent className={styles.main} children={children} />
+            {headerChildren && <HeaderComponent children={headerChildren} />}
+            <MainComponent
+              className={cn(styles.main, {
+                [styles.headless]: !headerChildren,
+              })}
+              children={children}
+            />
           </div>
         </div>
         <FooterComponent>
