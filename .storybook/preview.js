@@ -1,4 +1,4 @@
-import "../styles.css";
+import "../src/styles/root.scss";
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
