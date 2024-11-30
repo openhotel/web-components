@@ -10,6 +10,11 @@
   cursor: pointer;
   user-select: none;
 
+  &.fullWidth {
+    width: 100%;
+    justify-content: center;
+  }
+
   &.formButton {
     background-color: var(--bg-primary);
     color: var(--text-primary);

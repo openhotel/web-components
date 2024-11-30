@@ -7,6 +7,7 @@ import { cn } from "../../../utils";
 type Props = {
   buttonType?: "form" | "3d";
   className?: string;
+  fullWidth?: boolean;
 } & React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
@@ -22,6 +23,7 @@ export const ButtonComponent: React.FC<Props> = ({
       className={cn(styles.button, className, {
         [styles.threeButton]: buttonType === "3d",
         [styles.formButton]: buttonType === "form",
+        [styles.fullWidth]: !!props.fullWidth,
       })}
       {...props}
     />

@@ -23,3 +23,10 @@ export const ThreeDimensions = {
     buttonType: "3d",
   },
 };
+
+export const FullWidth = {
+  args: {
+    children: "Button",
+    fullWidth: true,
+  },
+};
