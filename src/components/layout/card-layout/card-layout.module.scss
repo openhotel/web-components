@@ -7,14 +7,16 @@
   align-items: center;
 
   .card {
-    width: 35rem;
-    height: 40rem;
+    min-width: 35rem;
+    min-height: 40rem;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
     .main {
       display: flex;
       flex-direction: column;
-      height: 100%;
+      flex-grow: 1;
 
       .content,
       .actions {
@@ -24,6 +26,8 @@
       .content {
         flex: 1;
         background-color: var(--bg-footer);
+        display: flex;
+        flex-direction: column;
       }
       .actions {
       }
