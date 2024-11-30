@@ -7,11 +7,12 @@
   --light-bg-footer: #fcfcfc;
 
   --light-bg-primary: #2d62bb;
-  --light-border-primary: #54aaff;
+  --light-border-primary: #2d62bb;
   --light-bg-secondary: #174186;
 
   --light-text-primary: #15141c;
   --light-text-secondary: #2a2b2f;
+  --light-text-placeholder: #6f6f6f;
 
   /*------------------------------------*/
 
@@ -21,11 +22,12 @@
   --dark-bg-footer: #141418;
 
   --dark-bg-primary: #2e518d;
-  --dark-border-primary: #54aaff;
+  --dark-border-primary: #2e518d;
   --dark-bg-secondary: #2e4977;
 
   --dark-text-primary: #f8fcff;
   --dark-text-secondary: #d1d2d5;
+  --dark-text-placeholder: #999;
 
   /*------------------------------------*/
 
@@ -38,10 +40,10 @@
   --bg-secondary: var(--light-bg-secondary);
 
   --border-primary: var(--light-border-primary);
-  --inner-shadow-primary: var(--light-border-primary);
 
   --text-primary: var(--light-text-primary);
   --text-secondary: var(--light-text-secondary);
+  --text-placeholder: var(--light-text-placeholder);
 
   /*------------------------------------*/
 
@@ -77,10 +79,10 @@
     --bg-secondary: var(--dark-bg-secondary);
 
     --border-primary: var(--dark-border-primary);
-    --inner-shadow-primary: var(--dark-border-primary);
 
     --text-primary: var(--dark-text-primary);
     --text-secondary: var(--dark-text-secondary);
+    --text-placeholder: var(--dark-text-placeholder);
 
     /*------------------------------------*/
 

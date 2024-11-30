@@ -1,9 +1,53 @@
+@import "../../../styles/all.module";
+
+.inputWrapper {
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+
+  .placeholder {
+    position: absolute;
+    top: 1.0rem;
+    left: 3rem;
+    color: var(--text-placeholder);
+    border-radius: 0.5rem;
+    padding: 0;
+    transition: padding, color, border, top, left, opacity;
+    transition-duration: 0.5s;
+  }
+
+  input:not(:placeholder-shown) + label {
+    top: -0.0rem;
+    left: 3rem;
+    opacity: 1;
+  }
+
+  input::placeholder {
+    opacity: 0;
+  }
+}
+
 .input {
   color: var(--text-primary);
   background-color: var(--bg-footer);
+  width: 100%;
 
   padding: 1rem 3rem;
   border-radius: 0.5rem;
 
   display: inline-flex;
+
+  &.hasPlaceholder {
+    transition: padding;
+    transition-duration: 0.5s;
+
+    &:not(:placeholder-shown) {
+      padding-top: 1.6rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+
+  &:focus {
+    outline: rem(2) solid var(--border-primary);
+  }
 }
