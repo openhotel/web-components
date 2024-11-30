@@ -1,3 +1,5 @@
+@import "./all.module";
+
 :root {
   --light-bg: #ffffff;
   --light-bg-main: #dbdbdb;
@@ -5,12 +7,13 @@
   --light-bg-footer: #fcfcfc;
 
   --light-bg-primary: #2d62bb;
+  --light-border-primary: #54aaff;
   --light-bg-secondary: #174186;
 
   --light-text-primary: #15141c;
   --light-text-secondary: #2a2b2f;
 
-  ------------------------------------: 0;
+  /*------------------------------------*/
 
   --dark-bg: #29292d;
   --dark-bg-main: #212224;
@@ -18,12 +21,13 @@
   --dark-bg-footer: #141418;
 
   --dark-bg-primary: #2e518d;
+  --dark-border-primary: #54aaff;
   --dark-bg-secondary: #2e4977;
 
   --dark-text-primary: #f8fcff;
   --dark-text-secondary: #d1d2d5;
 
-  ------------------------------------: 0;
+  /*------------------------------------*/
 
   --bg: var(--light-bg);
   --bg-main: var(--light-bg-main);
@@ -33,14 +37,24 @@
   --bg-primary: var(--light-bg-primary);
   --bg-secondary: var(--light-bg-secondary);
 
+  --border-primary: var(--light-border-primary);
+  --inner-shadow-primary: var(--light-border-primary);
+
   --text-primary: var(--light-text-primary);
   --text-secondary: var(--light-text-secondary);
 
-  ------------------------------------: 0;
+  /*------------------------------------*/
 
   --text-danger: #f93434;
 
-  ------------------------------------: 0;
+  /*------------------------------------*/
+
+  --border-radius: #{rem(3)};
+  --border-radius-md: #{rem(3)};
+  --border-radius-lg: #{rem(6)};
+  --border-radius-xl: #{rem(16)};
+
+  /*------------------------------------*/
 
   --inv-bg: var(--dark-bg);
   --inv-bg-main: var(--dark-bg-main);
@@ -62,10 +76,13 @@
     --bg-primary: var(--dark-bg-primary);
     --bg-secondary: var(--dark-bg-secondary);
 
+    --border-primary: var(--dark-border-primary);
+    --inner-shadow-primary: var(--dark-border-primary);
+
     --text-primary: var(--dark-text-primary);
     --text-secondary: var(--dark-text-secondary);
 
-    ------------------------------------: 0;
+    /*------------------------------------*/
 
     --inv-bg: var(--light-bg);
     --inv-bg-main: var(--light-bg-main);
@@ -104,12 +121,15 @@
   h1 {
     font-size: 3.2rem;
   }
+
   h2 {
     font-size: 2.8rem;
   }
+
   h3 {
     font-size: 2.2rem;
   }
+
   h4 {
     font-size: 2rem;
   }
@@ -132,10 +152,12 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
 #storybook-root {
   width: 100%;
   height: 100%;
 }
+
 a {
   &:visited,
   &:link {
