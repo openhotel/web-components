@@ -3,7 +3,7 @@ import * as React from "react";
 // @ts-ignore
 import styles from "./input.module.scss";
 import { cn } from "../../../utils";
-import { useId, useState } from "react";
+import { useId } from "react";
 
 type Props = {
   className?: string;

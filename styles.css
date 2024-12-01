@@ -126,7 +126,7 @@ body {
 
 a:visited,
 a:link {
-  color: var(--color-primary);
+  color: var(--bg-primary);
 }
 
 #root {
