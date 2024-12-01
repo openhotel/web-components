@@ -1,4 +1,4 @@
-@import "consts.module";
+@use "./consts.module" as *;
 
 @mixin web-only {
   @media only screen and (min-width: $WEB_MIN_WIDTH) {

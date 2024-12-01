@@ -1,4 +1,4 @@
-@use "../../../styles/colors.module.scss";
+@use "../../../styles/colors.module.scss" as *;
 
 .bigCard {
   display: flex;
@@ -37,7 +37,7 @@
         }
 
         background-color: var(--bg-main);
-        @include colors.setPrimaryTextColors();
+        @include setPrimaryTextColors();
       }
     }
   }

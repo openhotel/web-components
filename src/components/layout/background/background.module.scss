@@ -1,8 +1,8 @@
-@use "../../../styles/colors.module.scss";
+@use "../../../styles/colors.module.scss" as *;
 
 .background {
   background-color: var(--bg);
-  @include colors.setPrimaryTextColors();
+  @include setPrimaryTextColors();
 
   width: 100%;
   height: 100%;

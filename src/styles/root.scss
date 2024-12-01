@@ -1,4 +1,4 @@
-@import "./all.module";
+@use "./all.module" as *;
 
 :root {
   --light-bg: #ffffff;

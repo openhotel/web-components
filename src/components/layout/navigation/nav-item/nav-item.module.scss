@@ -1,4 +1,4 @@
-@use "../../../../styles/overflow.module.scss";
+@use "../../../../styles/overflow.module.scss" as *;
 
 .navItem {
   padding: 1rem 1rem 1rem 2rem;
@@ -27,7 +27,7 @@
   .text {
     flex: 1;
     text-align: left;
-    @include overflow.textEllipsis();
+    @include textEllipsis();
   }
 
   @mixin setColorWhenLight {
