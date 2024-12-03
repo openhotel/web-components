@@ -1,5 +1,4 @@
 import { CardLayoutComponent } from "./card-layout.component";
-import { BoxComponent } from "../../../components";
 
 export default {
   title: "Components/Layout/CardLayout",

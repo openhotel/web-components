@@ -4,7 +4,6 @@ import * as React from "react";
 import styles from "./nav-item.module.scss";
 import { cn } from "../../../../utils";
 import { BoxProps, ButtonComponent } from "../../../../components";
-import { useDarkTheme } from "../../../../hooks";
 
 type Props = {
   className?: string;
