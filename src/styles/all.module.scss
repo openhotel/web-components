@@ -1,6 +1,5 @@
 // This file is used to include all present and future sass utilities in a single import
-@forward "./colors.module";
 @forward "./consts.module";
 @forward "./mixins.module";
-@forward "./overflow.module";
 @forward "./functions.module";
+@forward "./colors.module";

@@ -4,11 +4,13 @@ import * as React from "react";
 import styles from "./input.module.scss";
 import { cn } from "../../../utils";
 import { useId } from "react";
+import { BoxComponent, BoxProps, extractBoxProps } from "../../../components";
 
 type Props = {
   className?: string;
   placeholder?: string;
-} & React.HTMLProps<HTMLInputElement>;
+} & Partial<BoxProps> &
+  React.HTMLProps<HTMLInputElement>;
 
 export const InputComponent: React.FC<Props> = ({
   className,
@@ -16,22 +18,23 @@ export const InputComponent: React.FC<Props> = ({
   ...props
 }) => {
   const id = useId();
+  const [otherProps, boxProps] = extractBoxProps<Props>(props);
 
   return (
-    <div className={styles.inputWrapper}>
+    <BoxComponent {...boxProps} className={styles.inputWrapper}>
       <input
         id={id}
         className={cn(styles.input, className, {
           [styles.hasPlaceholder]: !!placeholder,
         })}
         placeholder={placeholder}
-        {...props}
+        {...otherProps}
       />
       {placeholder ? (
         <label className={styles.placeholder} htmlFor={id}>
           {placeholder}
         </label>
       ) : null}
-    </div>
+    </BoxComponent>
   );
 };

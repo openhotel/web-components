@@ -20,7 +20,7 @@ export const Primary = {
 export const ThreeDimensions = {
   args: {
     children: "Button",
-    buttonType: "3d",
+    variant: "3d",
   },
 };
 
