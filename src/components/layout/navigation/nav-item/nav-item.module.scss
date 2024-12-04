@@ -15,4 +15,10 @@
     text-align: left;
     @include textEllipsis();
   }
+
+  &:hover {
+    background-color: var(--btn-blue-bg) !important;
+    border-color: var(--btn-blue-bd) !important;
+    color: var(--btn-blue-c) !important;
+  }
 }
