@@ -28,9 +28,9 @@
 
   .input {
     background-color: var(--input-bg);
-    border: 0.2rem solid var(--input-bd);
     color: var(--input-c);
     width: 100%;
+    border: 0.2rem solid transparent;
 
     padding: 1rem 2rem;
     border-radius: var(--border-radius);
@@ -52,6 +52,14 @@
     &:focus {
       background-color: var(--input-focus-bg);
       color: var(--input-focus-c);
+    }
+  }
+
+  &.bordered .input {
+    border: 0.2rem solid var(--input-bd);
+
+    &:active,
+    &:focus {
       border: 0.2rem solid var(--input-focus-bd);
     }
   }

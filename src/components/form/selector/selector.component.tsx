@@ -19,12 +19,10 @@ type Option = {
 type Props = {
   name?: string;
   placeholder?: string;
-
   className?: string;
-
+  bordered?: boolean;
   defaultOption?: Option | string;
   options: Option[];
-
   onChange?: (option: Option) => void;
 } & Partial<BoxProps>;
 
@@ -32,6 +30,7 @@ export const SelectorComponent: React.FC<Props> = ({
   name,
   placeholder,
   className,
+  bordered,
   options,
   defaultOption,
   onChange = () => {},
@@ -78,7 +77,12 @@ export const SelectorComponent: React.FC<Props> = ({
   return (
     <BoxComponent
       onClick={onContextClick}
-      className={cn(styles.selector, className, [styles.isOpen, isOpen])}
+      className={cn(
+        styles.selector,
+        className,
+        [styles.bordered, !!bordered],
+        [styles.isOpen, isOpen],
+      )}
       {...boxProps}
     >
       <div onClick={onToggleOptions} className={cn(styles.select)}>

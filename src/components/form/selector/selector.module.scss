@@ -5,6 +5,13 @@
   position: relative;
   user-select: none;
 
+  &.bordered .select {
+    border: 0.2rem solid var(--input-bd);
+  }
+
+  &.isOpen {
+  }
+
   .select {
     display: flex;
     position: relative;
@@ -14,7 +21,7 @@
     cursor: pointer;
 
     background-color: var(--input-bg);
-    border: 0.2rem solid var(--input-bd);
+    border: 0.2rem solid transparent;
     color: var(--input-c);
     border-radius: var(--border-radius);
     outline: none;
@@ -28,17 +35,14 @@
       top: 0;
       background-color: transparent;
       color: transparent;
-      z-index: -1;
       border: 0.2rem solid transparent;
+      z-index: -1;
     }
 
     &:has(.input:focus-visible) {
       color: var(--input-focus-c);
       background: var(--input-focus-bg);
       border-color: var(--input-focus-bd);
-    }
-
-    &.isOpen {
     }
 
     .clear {
@@ -65,7 +69,7 @@
     }
 
     .placeholder {
-      opacity: 0.55;
+      color: var(--input-placeholder-c);
     }
 
     .placeholder,
@@ -86,9 +90,7 @@
     border-radius: var(--border-radius);
     background: color.adjust($light-3, $alpha: -0.8);
 
-    @media (prefers-color-scheme: light) {
-      @include boxShadow();
-    }
+    @include boxShadow();
 
     .options {
       display: flex;
