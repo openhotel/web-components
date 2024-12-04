@@ -26,12 +26,12 @@ export type BoxProps = {
   mah?: SizeUnit;
   mih?: SizeUnit;
   // Color
-  c: string;
-  bg: string;
-  bd: string;
+  c?: string;
+  bg?: string;
+  bd?: string;
   // Font
-  fz: SizeUnit;
-  fw: "normal" | "bold";
+  fz?: SizeUnit;
+  fw?: "normal" | "bold";
   // Position
   position?: "relative" | "absolute" | "fixed" | "sticky";
   top?: SizeUnit;
