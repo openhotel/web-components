@@ -136,7 +136,7 @@
   );
   @include defineDarkColor(
     "text-3",
-    var(--color-dark-2),
+    var(--color-dark-6),
     var(--color-light-1),
     var(--color-dark-5)
   );
@@ -360,30 +360,83 @@
     transparent
   );
 
+  // v1
+  //@include defineDarkColor(
+  //  "input",
+  //  var(--color-light-3),
+  //  var(--color-dark-9),
+  //  var(--color-light-7)
+  //);
+  //@include defineDarkColor(
+  //  "input-hover",
+  //  var(--color-light-1),
+  //  var(--color-dark-9),
+  //  var(--color-blue-3)
+  //);
+  //@include defineDarkColor(
+  //  "input-focus",
+  //  var(--color-light-3),
+  //  var(--color-dark-9),
+  //  var(--color-blue-3)
+  //);
+  //@include defineDarkColor(
+  //  "input-placeholder",
+  //  transparent,
+  //  var(--color-dark-0),
+  //  transparent
+  //);
+
+  // v2
   @include defineDarkColor(
     "input",
-    var(--color-light-3),
-    var(--color-dark-9),
-    var(--color-light-7)
+    var(--color-dark-3),
+    var(--color-light-1),
+    var(--color-dark-7)
   );
   @include defineDarkColor(
     "input-hover",
+    var(--color-dark-1),
     var(--color-light-1),
-    var(--color-dark-9),
     var(--color-blue-3)
   );
   @include defineDarkColor(
     "input-focus",
-    var(--color-light-3),
-    var(--color-dark-9),
+    var(--color-dark-3),
+    var(--color-light-1),
     var(--color-blue-3)
   );
   @include defineDarkColor(
     "input-placeholder",
     transparent,
-    var(--color-dark-0),
+    var(--color-light-6),
     transparent
   );
+
+  // v3
+  //@include defineDarkColor(
+  //        "input",
+  //        var(--color-dark-9),
+  //        var(--color-light-1),
+  //        var(--color-dark-7)
+  //);
+  //@include defineDarkColor(
+  //        "input-hover",
+  //        var(--color-dark-9),
+  //        var(--color-light-1),
+  //        var(--color-blue-3)
+  //);
+  //@include defineDarkColor(
+  //        "input-focus",
+  //        var(--color-dark-9),
+  //        var(--color-light-1),
+  //        var(--color-blue-3)
+  //);
+  //@include defineDarkColor(
+  //        "input-placeholder",
+  //        transparent,
+  //        var(--color-light-9),
+  //        transparent
+  //);
 
   // Select modal
 
@@ -406,22 +459,41 @@
     transparent
   );
 
+  //@include defineDarkColor(
+  //  "select-modal",
+  //  color.adjust($light-3, $alpha: -0.5),
+  //  var(--color-dark-9),
+  //  transparent
+  //);
+  //@include defineDarkColor(
+  //  "select-modal-hover",
+  //  color.adjust($light-1, $alpha: -0.5),
+  //  var(--color-dark-9),
+  //  transparent
+  //);
+  //@include defineDarkColor(
+  //  "select-modal-focus",
+  //  color.adjust($light-3, $alpha: -0.5),
+  //  var(--color-dark-9),
+  //  transparent
+  //);
+
   @include defineDarkColor(
     "select-modal",
-    color.adjust($light-3, $alpha: -0.5),
-    var(--color-dark-9),
+    color.adjust($dark-9, $alpha: -0.5),
+    var(--color-light-1),
     transparent
   );
   @include defineDarkColor(
     "select-modal-hover",
-    color.adjust($light-1, $alpha: -0.5),
-    var(--color-dark-9),
+    color.adjust($dark-6, $alpha: -0.5),
+    var(--color-light-1),
     transparent
   );
   @include defineDarkColor(
     "select-modal-focus",
-    color.adjust($light-3, $alpha: -0.5),
-    var(--color-dark-9),
+    color.adjust($dark-4, $alpha: -0.5),
+    var(--color-light-1),
     transparent
   );
 

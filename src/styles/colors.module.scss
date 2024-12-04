@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Color palettes
 $dark-0: #616167;
 $dark-1: #57585d;
@@ -5,18 +7,18 @@ $dark-2: #4e4f54;
 $dark-3: #43454a;
 $dark-4: #37393e;
 $dark-5: #2e3035;
-$dark-6: #27282d;
+$dark-6: #28282d;
 $dark-7: #252529;
 $dark-8: #212224;
 $dark-9: #141418;
 
-$light-0: #f5f5fb;
-$light-1: #eeeef4;
-$light-2: #e4e4ea;
+$light-0: #ffffff;
+$light-1: #fcfcfc;
+$light-2: #efefef;
 $light-3: #dddde3;
 $light-4: #d7d7dd;
 $light-5: #d0d0d6;
-$light-6: #cacad0;
+$light-6: #dbdbdb;
 $light-7: #b0b0b6;
 $light-8: #98989d;
 $light-9: #808085;
@@ -32,27 +34,16 @@ $grey-7: #495057;
 $grey-8: #343a40;
 $grey-9: #212529;
 
-$blue-0: #f5f8ff;
-$blue-1: #e3edff;
-$blue-2: #c9ddff;
-$blue-3: #a8c8ff;
-$blue-4: #87b3ff;
-$blue-5: #6ba1ff;
-$blue-6: #5290fa;
-$blue-7: #3e7ff0;
-$blue-8: #3172e0;
-$blue-9: #2a65c9;
-
-$blue-0: #f0f6ff;
-$blue-1: #c0d8ff;
-$blue-2: #90baff;
-$blue-3: #659bf7;
-$blue-4: #4a7fd7;
-$blue-5: #2d62bb;
-$blue-6: #094db4;
-$blue-7: #00388d;
-$blue-8: #002462;
-$blue-9: #00143f;
+$blue-0: color.adjust(#2e518d, $lightness: 35%);
+$blue-1: color.adjust(#2e518d, $lightness: 27%);
+$blue-2: color.adjust(#2e518d, $lightness: 22%);
+$blue-3: color.adjust(#2e518d, $lightness: 16%);
+$blue-4: color.adjust(#2e518d, $lightness: 12%);
+$blue-5: color.adjust(#2e518d, $lightness: 6%);
+$blue-6: color.adjust(#2e518d, $lightness: 0%);
+$blue-7: color.adjust(#2e518d, $lightness: -10%);
+$blue-8: color.adjust(#2e518d, $lightness: -20%);
+$blue-9: color.adjust(#2e518d, $lightness: -30%);
 
 $red-0: #fff2f0;
 $red-1: #ffd3ce;
