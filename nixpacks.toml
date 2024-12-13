@@ -1,4 +1,1 @@
-[build]
-noDetect = true
-nixPkgs = ["node"]
-runtime = "node"
+providers = ["node"]
