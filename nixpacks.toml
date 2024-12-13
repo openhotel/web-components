@@ -1,7 +1,2 @@
-providers = ["node"]
-
-[phases.install]
-cmds = ["yarn install --frozen-lockfile"]
-
-[phases.build]
-cmds = ["yarn run build-storybook"]
+[build]
+nixPkgs = ["node"]
