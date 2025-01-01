@@ -13,7 +13,6 @@
 - Install `yarn`
 - Run `yarn`
 
-
 ### Run storybook
 
 - Run `yarn build`
