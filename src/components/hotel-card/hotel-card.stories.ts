@@ -19,6 +19,7 @@ export const Primary = {
     ms: 400,
     users: 13,
     maxUsers: 200,
+    joinedUsers: 32,
 
     logo: "/assets/hotel/hotel-logo.webp",
     background: "/assets/hotel/hotel-background.webp",
@@ -30,6 +31,7 @@ export const Secondary = {
     title: "openhotel.club",
     owner: "pagoru",
     ms: 100,
+    joinedUsers: 32,
 
     logo: "/assets/hotel/hotel-logo.webp",
     background: "/assets/hotel/hotel-background.webp",
@@ -46,6 +48,7 @@ export const Verified = {
     ms: 50,
     users: 13,
     maxUsers: 200,
+    joinedUsers: 32,
 
     logo: "/assets/hotel/hotel-logo.webp",
     background: "/assets/hotel/hotel-background.webp",
@@ -63,6 +66,7 @@ export const VerifiedAndOfficial = {
     ms: 150,
     users: 13,
     maxUsers: 200,
+    joinedUsers: 32,
 
     logo: "/assets/hotel/hotel-logo.webp",
     background: "/assets/hotel/hotel-background.webp",
@@ -78,6 +82,8 @@ export const NotReachable = {
     description:
       "The official Open Hotel server. Join with friends, play, earn credits, build your rooms, trade furniture and enjoy this authentic hotel experience.",
 
+    joinedUsers: 32,
+
     logo: "/assets/hotel/hotel-logo.webp",
     background: "/assets/hotel/hotel-background.webp",
   },
@@ -92,6 +98,7 @@ export const BadPing = {
     ms: 600,
     users: 13,
     maxUsers: 200,
+    joinedUsers: 32,
 
     logo: "/assets/hotel/hotel-logo.webp",
     background: "/assets/hotel/hotel-background.webp",

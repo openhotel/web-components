@@ -26,6 +26,7 @@ type Props = {
   ms?: number;
   users?: number;
   maxUsers?: number;
+  joinedUsers: number;
 };
 
 export const HotelCardComponent: React.FC<Props> = ({
@@ -44,6 +45,7 @@ export const HotelCardComponent: React.FC<Props> = ({
   ms,
   users,
   maxUsers,
+  joinedUsers,
 }) => {
   return (
     <div className={styles.hotelWrapper}>
@@ -94,11 +96,21 @@ export const HotelCardComponent: React.FC<Props> = ({
               ) : null}
             </div>
             <div className={styles.status}>
-              {maxUsers ? (
-                <div>
-                  {users}/{maxUsers}
-                </div>
-              ) : null}
+              <div className={styles.users}>
+                {maxUsers ? (
+                  <TooltipComponent
+                    title={`${joinedUsers} users already joined!`}
+                  >
+                    <label className={styles.current}>
+                      {users}/{maxUsers}
+                    </label>
+                  </TooltipComponent>
+                ) : (
+                  <label className={styles.joined}>
+                    {joinedUsers} already joined
+                  </label>
+                )}{" "}
+              </div>
               <TooltipComponent title={`${ms}ms`}>
                 <SignalIconComponent ms={ms} className={styles.icon} />
               </TooltipComponent>
