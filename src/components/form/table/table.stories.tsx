@@ -452,15 +452,15 @@ export const CursorPaginated = () => {
         id: data.length + 4,
         name: `User ${data.length + 4}`,
         username: `user${data.length + 4}`,
-        email: `user${data.length +4}@example.com`,
+        email: `user${data.length + 4}@example.com`,
       },
     ];
     setData((prev) => [...prev, ...newRows]);
     setCursor(`cursor-${data.length + newRows.length}`);
 
-    if(data.length > 10) {
-      setCursor("")
-      return
+    if (data.length > 10) {
+      setCursor("");
+      return;
     }
   };
 

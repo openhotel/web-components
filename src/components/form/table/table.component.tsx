@@ -43,7 +43,7 @@ export const TableComponent: React.FC<Props> = ({
   searchable = false,
   rowFunc,
   cursor,
-  onNext
+  onNext,
 }) => {
   const [pageIndex, setPageIndex] = useState(defaultPage);
   const [searchFilterText, setSearchFilterText] = useState<string>("");
@@ -92,7 +92,10 @@ export const TableComponent: React.FC<Props> = ({
   const canGoToPreviousPage = useMemo(() => pageIndex !== 0, [pageIndex]);
   const canGoToNextPage = useMemo(() => {
     const nextPageStart = (pageIndex + 1) * pageRows;
-    return sortedData.length > nextPageStart || (!!cursor && sortedData.length === nextPageStart);
+    return (
+      sortedData.length > nextPageStart ||
+      (!!cursor && sortedData.length === nextPageStart)
+    );
   }, [sortedData, pageIndex, pageRows, cursor]);
 
   const maxPages = useMemo(
