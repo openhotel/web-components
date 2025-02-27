@@ -29,7 +29,7 @@ export const FileInputComponent: React.FC<Props> = ({
   const [otherProps, boxProps] = extractBoxProps<Props>(props);
   const [files, setFiles] = useState<File[]>([]);
 
-  const handleChange = useCallback(
+  const $onChange = useCallback(
     (event) => {
       const newFiles = Array.from(event.target.files) as File[];
       setFiles(newFiles);
@@ -38,7 +38,7 @@ export const FileInputComponent: React.FC<Props> = ({
     [onChange],
   );
 
-  const handleDrop = useCallback(
+  const $onDrop = useCallback(
     (event) => {
       event.preventDefault();
       const acceptedTypes =
@@ -57,11 +57,11 @@ export const FileInputComponent: React.FC<Props> = ({
     [onChange, otherProps.accept],
   );
 
-  const handleDragOver = useCallback((event) => {
+  const $onDragOver = useCallback((event) => {
     event.preventDefault();
   }, []);
 
-  const handleFileClick = useCallback((fileToRemove: File) => {
+  const $onFileClick = useCallback((fileToRemove: File) => {
     setFiles((prevFiles) => prevFiles.filter((file) => file !== fileToRemove));
   }, []);
 
@@ -69,8 +69,8 @@ export const FileInputComponent: React.FC<Props> = ({
     <BoxComponent {...boxProps} className={cn(styles.inputWrapper, className)}>
       <div
         className={styles.dragContainer}
-        onDrop={handleDrop}
-        onDragOver={handleDragOver}
+        onDrop={$onDrop}
+        onDragOver={$onDragOver}
       >
         <label htmlFor={id} className={styles.label}>
           {children ?? (
@@ -87,7 +87,7 @@ export const FileInputComponent: React.FC<Props> = ({
             [styles.hasPlaceholder]: !!placeholder,
           })}
           type="file"
-          onChange={handleChange}
+          onChange={$onChange}
         />
         <div className={styles.files}>
           {files.length
@@ -96,7 +96,7 @@ export const FileInputComponent: React.FC<Props> = ({
                   <span
                     key={index}
                     className={styles.fileItem}
-                    onClick={() => handleFileClick(file)}
+                    onClick={() => $onFileClick(file)}
                   >
                     {file.name}
                   </span>
