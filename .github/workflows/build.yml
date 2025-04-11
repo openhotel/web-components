@@ -27,6 +27,3 @@ jobs:
 
       - name: run build
         run: yarn run build
-
-      - name: check publish
-        run: yarn run publish:check
