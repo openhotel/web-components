@@ -7,7 +7,8 @@
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "styles.scss"
   ],
   "engines": {
     "node": "22"
@@ -48,6 +49,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "vite build",
-    "publish": "npm publish --provenance --access public"
+    "publish": "npm publish --provenance --access public",
+    "link": "npm link"
   }
 }
