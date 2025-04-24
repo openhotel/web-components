@@ -3,7 +3,7 @@ import * as React from "react";
 // @ts-ignore
 import styles from "./file-input.module.scss";
 import { cn } from "../../../utils";
-import { useCallback, useId, useState } from "react";
+import { useCallback, useId, useMemo, useState } from "react";
 import {
   BoxComponent,
   extractBoxProps,
@@ -54,16 +54,34 @@ export const FileInputComponent: React.FC<Props> = ({
       setFiles(newFiles);
       onChange && onChange(newFiles);
     },
-    [onChange, otherProps.accept],
+    [onChange, otherProps.accept, setFiles],
   );
 
   const $onDragOver = useCallback((event) => {
     event.preventDefault();
   }, []);
 
-  const $onFileClick = useCallback((fileToRemove: File) => {
-    setFiles((prevFiles) => prevFiles.filter((file) => file !== fileToRemove));
-  }, []);
+  const $onFileClick = useCallback(
+    (fileToRemove: File) => () => {
+      setFiles((prevFiles) =>
+        prevFiles.filter((file) => file !== fileToRemove),
+      );
+    },
+    [setFiles],
+  );
+
+  const renderFileList = useMemo(() => {
+    if (!files.length) return <>No file selected</>;
+
+    return files.map((file, index, array) => (
+      <React.Fragment key={file.name + file.size}>
+        <span className={styles.fileItem} onClick={$onFileClick(file)}>
+          {file.name}
+        </span>
+        {index < array.length - 1 && ", "}
+      </React.Fragment>
+    ));
+  }, [files, $onFileClick]);
 
   return (
     <BoxComponent {...boxProps} className={cn(styles.inputWrapper, className)}>
@@ -89,26 +107,7 @@ export const FileInputComponent: React.FC<Props> = ({
           type="file"
           onChange={$onChange}
         />
-        <div className={styles.files}>
-          {files.length
-            ? files
-                .map((file, index) => (
-                  <span
-                    key={index}
-                    className={styles.fileItem}
-                    onClick={() => $onFileClick(file)}
-                  >
-                    {file.name}
-                  </span>
-                ))
-                .map((element, index, array) => (
-                  <React.Fragment key={index}>
-                    {element}
-                    {index < array.length - 1 && ", "}
-                  </React.Fragment>
-                ))
-            : "No file selected"}
-        </div>
+        <div className={styles.files}>{renderFileList}</div>
       </div>
     </BoxComponent>
   );
