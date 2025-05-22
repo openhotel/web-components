@@ -17,7 +17,6 @@
     outline: none;
 
     @include textEllipsis();
-    @include lightBoxShadow();
 
     > * {
       flex-shrink: 0;
