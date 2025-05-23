@@ -12,7 +12,7 @@ export default {
   component: MainLayoutComponent,
 };
 
-export const Primary = {
+export const MainLayout = {
   args: {
     headerChildren: (
       <>

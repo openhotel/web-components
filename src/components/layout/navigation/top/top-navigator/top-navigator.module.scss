@@ -1,0 +1,24 @@
+@use "../../../../../styles/all.module" as *;
+
+.navigator {
+  display: none;
+
+  margin: -1rem 0;
+
+  @include phone-only() {
+    display: flex;
+  }
+
+  .logo {
+    margin: 0 auto;
+
+    img {
+      width: 12.8rem;
+    }
+  }
+  .items {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}

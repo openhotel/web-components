@@ -1,2 +1,2 @@
-export * from "./nav-item";
-export * from "./navigator";
+export * from './lateral'
+export * from './top'

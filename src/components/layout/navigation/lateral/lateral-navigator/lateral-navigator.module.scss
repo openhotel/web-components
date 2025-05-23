@@ -1,11 +1,17 @@
+@use "../../../../../styles/all.module" as *;
+
 .navigator {
   display: flex;
   flex-direction: column;
 
   padding: 1rem;
 
+
+  @include phone-only() {
+    display: none;
+  }
+
   .logo {
-    margin: 0 auto;
 
     img {
       width: 12.8rem;

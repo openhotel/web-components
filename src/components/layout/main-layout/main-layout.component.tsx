@@ -4,12 +4,12 @@ import * as React from "react";
 import styles from "./main-layout.module.scss";
 import {
   FooterComponent,
-  NavigatorComponent,
+  LateralNavigatorComponent,
   SocialComponent,
   BackgroundComponent,
   CardComponent,
   MainComponent,
-  LicenseComponent,
+  LicenseComponent, TopNavigatorComponent,
 } from "../../../components";
 import { cn } from "../../../utils";
 
@@ -29,9 +29,10 @@ export const MainLayoutComponent: React.FC<Props> = ({
     <BackgroundComponent>
       <CardComponent className={styles.bigCard}>
         <div className={styles.container}>
-          <NavigatorComponent children={navigatorChildren} />
+          <LateralNavigatorComponent children={navigatorChildren} />
           <div className={styles.bigContainer}>
             {/*{headerChildren && <HeaderComponent children={headerChildren} />}*/}
+            <TopNavigatorComponent/>
             <MainComponent
               className={cn(styles.main, {
                 [styles.headless]: !headerChildren,
