@@ -9,10 +9,11 @@ import {
   BackgroundComponent,
   CardComponent,
   MainComponent,
-  LicenseComponent, HeaderComponent,
+  LicenseComponent,
+  HeaderComponent,
 } from "../../../components";
 import { cn } from "../../../utils";
-import {LayoutProvider} from "../../../hooks";
+import { LayoutProvider } from "../../../hooks";
 
 type Props = {
   navigatorChildren?: React.ReactNode;

@@ -27,9 +27,9 @@ import { NetworkIconComponent } from "./network-icon.component";
 import { ForbiddenIconComponent } from "./forbidden-icon.component";
 import { AnalyticsIconComponent } from "./analytics-icon.component";
 import { KeysIconComponent } from "./keys-icon.component";
-import {BurgerIconComponent} from "./burger-icon.component";
-import {BurgerCrossIconComponent} from "./burger-cross-icon.component";
-import {BurgerArrowIconComponent} from "./burger-arrow-icon.component";
+import { BurgerIconComponent } from "./burger-icon.component";
+import { BurgerCrossIconComponent } from "./burger-cross-icon.component";
+import { BurgerArrowIconComponent } from "./burger-arrow-icon.component";
 
 export default {
   title: "Components/Icons",
@@ -71,4 +71,3 @@ export const LowSignal = () => <LowSignalIconComponent />;
 export const MediumSignal = () => <MediumSignalIconComponent />;
 export const HighSignal = () => <HighSignalIconComponent />;
 export const FullSignal = () => <FullSignalIconComponent />;
-

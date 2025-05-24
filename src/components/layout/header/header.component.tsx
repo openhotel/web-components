@@ -4,7 +4,7 @@ import * as React from "react";
 import styles from "./header.module.scss";
 import { useLayout } from "../../../hooks";
 import { useCallback } from "react";
-import {BurgerArrowIconComponent, BurgerIconComponent} from "../../icons";
+import { BurgerArrowIconComponent, BurgerIconComponent } from "../../icons";
 
 type Props = {
   children?: React.ReactNode;

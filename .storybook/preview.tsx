@@ -4,7 +4,7 @@ import { BackgroundComponent } from "../src/components";
 import { useEffect, useState } from "react";
 import { addons } from "@storybook/preview-api";
 import { DARK_MODE_EVENT_NAME } from "storybook-dark-mode";
-import {LayoutProvider} from "../src/hooks";
+import { LayoutProvider } from "../src/hooks";
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
@@ -45,9 +45,7 @@ export default preview;
 export const decorators = [
   (renderStory) => (
     <BackgroundComponent className="storybook-background">
-      <LayoutProvider>
-        {renderStory()}
-      </LayoutProvider>
+      <LayoutProvider>{renderStory()}</LayoutProvider>
     </BackgroundComponent>
   ),
   (renderStory) => (
