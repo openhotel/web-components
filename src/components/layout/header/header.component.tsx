@@ -4,7 +4,7 @@ import * as React from "react";
 import styles from "./header.module.scss";
 import { useLayout } from "../../../hooks";
 import { useCallback } from "react";
-import { BurgerIconComponent, CrossIconComponent } from "../../icons";
+import {BurgerArrowIconComponent, BurgerIconComponent} from "../../icons";
 
 type Props = {
   children?: React.ReactNode;
@@ -20,7 +20,7 @@ export const HeaderComponent: React.FC<Props> = ({ children }) => {
   return (
     <header className={styles.header}>
       <div className={styles.burger} onClick={onClickBurger}>
-        {openNavigator ? <CrossIconComponent /> : <BurgerIconComponent />}
+        {openNavigator ? <BurgerArrowIconComponent /> : <BurgerIconComponent />}
       </div>
       {children}
     </header>

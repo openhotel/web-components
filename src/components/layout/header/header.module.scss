@@ -10,6 +10,8 @@
 
   .burger {
     display: none;
+    cursor: pointer;
+    margin-left: 2rem;
 
     @include phone-only() {
       display: inherit;

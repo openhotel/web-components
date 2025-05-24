@@ -2,7 +2,7 @@ import React from "react";
 import { IconComponent } from "./icon.component";
 import type { IconProps } from "./icon.component";
 
-export const BurgerIconComponent: React.FC<IconProps> = ({
+export const BurgerCrossIconComponent: React.FC<IconProps> = ({
   fill = "white",
   ...props
 }) => (
@@ -13,7 +13,6 @@ export const BurgerIconComponent: React.FC<IconProps> = ({
       stroke-width="2.5"
       stroke-linecap="round"
       stroke-linejoin="round"
-      fill={fill}
     />
   </IconComponent>
 );
